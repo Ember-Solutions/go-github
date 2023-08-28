@@ -788,6 +788,19 @@ type PackageEvent struct {
 	Installation *Installation `json:"installation,omitempty"`
 }
 
+type PackageV2Event struct {
+	// Action is the action that was performed.
+	// Can be "published" or "updated".
+	Action  *string       `json:"action,omitempty"`
+	Package *PackageV2    `json:"package,omitempty"`
+	Repo    *Repository   `json:"repository,omitempty"`
+	Org     *Organization `json:"organization,omitempty"`
+	Sender  *User         `json:"sender,omitempty"`
+
+	// The following fields are only populated by Webhook events.
+	Installation *Installation `json:"installation,omitempty"`
+}
+
 // PageBuildEvent represents an attempted build of a GitHub Pages site, whether
 // successful or not.
 // The Webhook event name is "page_build".

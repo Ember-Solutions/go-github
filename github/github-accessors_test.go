@@ -14878,6 +14878,378 @@ func TestPackageRelease_GetURL(tt *testing.T) {
 	p.GetURL()
 }
 
+func TestPackageV2_GetCreatedAt(tt *testing.T) {
+	var zeroValue time.Time
+	p := &PackageV2{CreatedAt: &zeroValue}
+	p.GetCreatedAt()
+	p = &PackageV2{}
+	p.GetCreatedAt()
+	p = nil
+	p.GetCreatedAt()
+}
+
+func TestPackageV2_GetDescription(tt *testing.T) {
+	var zeroValue string
+	p := &PackageV2{Description: &zeroValue}
+	p.GetDescription()
+	p = &PackageV2{}
+	p.GetDescription()
+	p = nil
+	p.GetDescription()
+}
+
+func TestPackageV2_GetEcosystem(tt *testing.T) {
+	var zeroValue string
+	p := &PackageV2{Ecosystem: &zeroValue}
+	p.GetEcosystem()
+	p = &PackageV2{}
+	p.GetEcosystem()
+	p = nil
+	p.GetEcosystem()
+}
+
+func TestPackageV2_GetHtmlUrl(tt *testing.T) {
+	var zeroValue string
+	p := &PackageV2{HtmlUrl: &zeroValue}
+	p.GetHtmlUrl()
+	p = &PackageV2{}
+	p.GetHtmlUrl()
+	p = nil
+	p.GetHtmlUrl()
+}
+
+func TestPackageV2_GetId(tt *testing.T) {
+	var zeroValue int64
+	p := &PackageV2{Id: &zeroValue}
+	p.GetId()
+	p = &PackageV2{}
+	p.GetId()
+	p = nil
+	p.GetId()
+}
+
+func TestPackageV2_GetName(tt *testing.T) {
+	var zeroValue string
+	p := &PackageV2{Name: &zeroValue}
+	p.GetName()
+	p = &PackageV2{}
+	p.GetName()
+	p = nil
+	p.GetName()
+}
+
+func TestPackageV2_GetNamespace(tt *testing.T) {
+	var zeroValue string
+	p := &PackageV2{Namespace: &zeroValue}
+	p.GetNamespace()
+	p = &PackageV2{}
+	p.GetNamespace()
+	p = nil
+	p.GetNamespace()
+}
+
+func TestPackageV2_GetPackageVersion(tt *testing.T) {
+	p := &PackageV2{}
+	p.GetPackageVersion()
+	p = nil
+	p.GetPackageVersion()
+}
+
+func TestPackageV2_GetUpdatedAt(tt *testing.T) {
+	var zeroValue time.Time
+	p := &PackageV2{UpdatedAt: &zeroValue}
+	p.GetUpdatedAt()
+	p = &PackageV2{}
+	p.GetUpdatedAt()
+	p = nil
+	p.GetUpdatedAt()
+}
+
+func TestPackageV2Event_GetAction(tt *testing.T) {
+	var zeroValue string
+	p := &PackageV2Event{Action: &zeroValue}
+	p.GetAction()
+	p = &PackageV2Event{}
+	p.GetAction()
+	p = nil
+	p.GetAction()
+}
+
+func TestPackageV2Event_GetInstallation(tt *testing.T) {
+	p := &PackageV2Event{}
+	p.GetInstallation()
+	p = nil
+	p.GetInstallation()
+}
+
+func TestPackageV2Event_GetOrg(tt *testing.T) {
+	p := &PackageV2Event{}
+	p.GetOrg()
+	p = nil
+	p.GetOrg()
+}
+
+func TestPackageV2Event_GetPackage(tt *testing.T) {
+	p := &PackageV2Event{}
+	p.GetPackage()
+	p = nil
+	p.GetPackage()
+}
+
+func TestPackageV2Event_GetRepo(tt *testing.T) {
+	p := &PackageV2Event{}
+	p.GetRepo()
+	p = nil
+	p.GetRepo()
+}
+
+func TestPackageV2Event_GetSender(tt *testing.T) {
+	p := &PackageV2Event{}
+	p.GetSender()
+	p = nil
+	p.GetSender()
+}
+
+func TestPackageV2NPMMetadata_GetCommitOid(tt *testing.T) {
+	var zeroValue string
+	p := &PackageV2NPMMetadata{CommitOid: &zeroValue}
+	p.GetCommitOid()
+	p = &PackageV2NPMMetadata{}
+	p.GetCommitOid()
+	p = nil
+	p.GetCommitOid()
+}
+
+func TestPackageV2NPMMetadata_GetDeletedById(tt *testing.T) {
+	var zeroValue int
+	p := &PackageV2NPMMetadata{DeletedById: &zeroValue}
+	p.GetDeletedById()
+	p = &PackageV2NPMMetadata{}
+	p.GetDeletedById()
+	p = nil
+	p.GetDeletedById()
+}
+
+func TestPackageV2NPMMetadata_GetDependencies(tt *testing.T) {
+	zeroValue := map[string]string{}
+	p := &PackageV2NPMMetadata{Dependencies: zeroValue}
+	p.GetDependencies()
+	p = &PackageV2NPMMetadata{}
+	p.GetDependencies()
+	p = nil
+	p.GetDependencies()
+}
+
+func TestPackageV2NPMMetadata_GetDescription(tt *testing.T) {
+	var zeroValue string
+	p := &PackageV2NPMMetadata{Description: &zeroValue}
+	p.GetDescription()
+	p = &PackageV2NPMMetadata{}
+	p.GetDescription()
+	p = nil
+	p.GetDescription()
+}
+
+func TestPackageV2NPMMetadata_GetDevDependencies(tt *testing.T) {
+	zeroValue := map[string]string{}
+	p := &PackageV2NPMMetadata{DevDependencies: zeroValue}
+	p.GetDevDependencies()
+	p = &PackageV2NPMMetadata{}
+	p.GetDevDependencies()
+	p = nil
+	p.GetDevDependencies()
+}
+
+func TestPackageV2NPMMetadata_GetEngines(tt *testing.T) {
+	zeroValue := map[string]string{}
+	p := &PackageV2NPMMetadata{Engines: zeroValue}
+	p.GetEngines()
+	p = &PackageV2NPMMetadata{}
+	p.GetEngines()
+	p = nil
+	p.GetEngines()
+}
+
+func TestPackageV2NPMMetadata_GetGitHead(tt *testing.T) {
+	var zeroValue string
+	p := &PackageV2NPMMetadata{GitHead: &zeroValue}
+	p.GetGitHead()
+	p = &PackageV2NPMMetadata{}
+	p.GetGitHead()
+	p = nil
+	p.GetGitHead()
+}
+
+func TestPackageV2NPMMetadata_GetHasShrinkwrap(tt *testing.T) {
+	var zeroValue bool
+	p := &PackageV2NPMMetadata{HasShrinkwrap: &zeroValue}
+	p.GetHasShrinkwrap()
+	p = &PackageV2NPMMetadata{}
+	p.GetHasShrinkwrap()
+	p = nil
+	p.GetHasShrinkwrap()
+}
+
+func TestPackageV2NPMMetadata_GetHomepage(tt *testing.T) {
+	var zeroValue string
+	p := &PackageV2NPMMetadata{Homepage: &zeroValue}
+	p.GetHomepage()
+	p = &PackageV2NPMMetadata{}
+	p.GetHomepage()
+	p = nil
+	p.GetHomepage()
+}
+
+func TestPackageV2NPMMetadata_GetId(tt *testing.T) {
+	var zeroValue string
+	p := &PackageV2NPMMetadata{Id: &zeroValue}
+	p.GetId()
+	p = &PackageV2NPMMetadata{}
+	p.GetId()
+	p = nil
+	p.GetId()
+}
+
+func TestPackageV2NPMMetadata_GetInstallationCommand(tt *testing.T) {
+	var zeroValue string
+	p := &PackageV2NPMMetadata{InstallationCommand: &zeroValue}
+	p.GetInstallationCommand()
+	p = &PackageV2NPMMetadata{}
+	p.GetInstallationCommand()
+	p = nil
+	p.GetInstallationCommand()
+}
+
+func TestPackageV2NPMMetadata_GetLicense(tt *testing.T) {
+	var zeroValue string
+	p := &PackageV2NPMMetadata{License: &zeroValue}
+	p.GetLicense()
+	p = &PackageV2NPMMetadata{}
+	p.GetLicense()
+	p = nil
+	p.GetLicense()
+}
+
+func TestPackageV2NPMMetadata_GetMain(tt *testing.T) {
+	var zeroValue string
+	p := &PackageV2NPMMetadata{Main: &zeroValue}
+	p.GetMain()
+	p = &PackageV2NPMMetadata{}
+	p.GetMain()
+	p = nil
+	p.GetMain()
+}
+
+func TestPackageV2NPMMetadata_GetName(tt *testing.T) {
+	var zeroValue string
+	p := &PackageV2NPMMetadata{Name: &zeroValue}
+	p.GetName()
+	p = &PackageV2NPMMetadata{}
+	p.GetName()
+	p = nil
+	p.GetName()
+}
+
+func TestPackageV2NPMMetadata_GetNodeVersion(tt *testing.T) {
+	var zeroValue string
+	p := &PackageV2NPMMetadata{NodeVersion: &zeroValue}
+	p.GetNodeVersion()
+	p = &PackageV2NPMMetadata{}
+	p.GetNodeVersion()
+	p = nil
+	p.GetNodeVersion()
+}
+
+func TestPackageV2NPMMetadata_GetNpmUser(tt *testing.T) {
+	var zeroValue string
+	p := &PackageV2NPMMetadata{NpmUser: &zeroValue}
+	p.GetNpmUser()
+	p = &PackageV2NPMMetadata{}
+	p.GetNpmUser()
+	p = nil
+	p.GetNpmUser()
+}
+
+func TestPackageV2NPMMetadata_GetNpmVersion(tt *testing.T) {
+	var zeroValue string
+	p := &PackageV2NPMMetadata{NpmVersion: &zeroValue}
+	p.GetNpmVersion()
+	p = &PackageV2NPMMetadata{}
+	p.GetNpmVersion()
+	p = nil
+	p.GetNpmVersion()
+}
+
+func TestPackageV2NPMMetadata_GetOptionalDependencies(tt *testing.T) {
+	zeroValue := map[string]string{}
+	p := &PackageV2NPMMetadata{OptionalDependencies: zeroValue}
+	p.GetOptionalDependencies()
+	p = &PackageV2NPMMetadata{}
+	p.GetOptionalDependencies()
+	p = nil
+	p.GetOptionalDependencies()
+}
+
+func TestPackageV2NPMMetadata_GetPeerDependencies(tt *testing.T) {
+	zeroValue := map[string]string{}
+	p := &PackageV2NPMMetadata{PeerDependencies: zeroValue}
+	p.GetPeerDependencies()
+	p = &PackageV2NPMMetadata{}
+	p.GetPeerDependencies()
+	p = nil
+	p.GetPeerDependencies()
+}
+
+func TestPackageV2NPMMetadata_GetPublishedViaActions(tt *testing.T) {
+	var zeroValue bool
+	p := &PackageV2NPMMetadata{PublishedViaActions: &zeroValue}
+	p.GetPublishedViaActions()
+	p = &PackageV2NPMMetadata{}
+	p.GetPublishedViaActions()
+	p = nil
+	p.GetPublishedViaActions()
+}
+
+func TestPackageV2NPMMetadata_GetReadme(tt *testing.T) {
+	var zeroValue string
+	p := &PackageV2NPMMetadata{Readme: &zeroValue}
+	p.GetReadme()
+	p = &PackageV2NPMMetadata{}
+	p.GetReadme()
+	p = nil
+	p.GetReadme()
+}
+
+func TestPackageV2NPMMetadata_GetReleaseId(tt *testing.T) {
+	var zeroValue int
+	p := &PackageV2NPMMetadata{ReleaseId: &zeroValue}
+	p.GetReleaseId()
+	p = &PackageV2NPMMetadata{}
+	p.GetReleaseId()
+	p = nil
+	p.GetReleaseId()
+}
+
+func TestPackageV2NPMMetadata_GetScripts(tt *testing.T) {
+	zeroValue := map[string]string{}
+	p := &PackageV2NPMMetadata{Scripts: zeroValue}
+	p.GetScripts()
+	p = &PackageV2NPMMetadata{}
+	p.GetScripts()
+	p = nil
+	p.GetScripts()
+}
+
+func TestPackageV2NPMMetadata_GetVersion(tt *testing.T) {
+	var zeroValue string
+	p := &PackageV2NPMMetadata{Version: &zeroValue}
+	p.GetVersion()
+	p = &PackageV2NPMMetadata{}
+	p.GetVersion()
+	p = nil
+	p.GetVersion()
+}
+
 func TestPackageVersion_GetAuthor(tt *testing.T) {
 	p := &PackageVersion{}
 	p.GetAuthor()
@@ -15077,6 +15449,83 @@ func TestPackageVersion_GetVersion(tt *testing.T) {
 	p.GetVersion()
 	p = nil
 	p.GetVersion()
+}
+
+func TestPackageVersionV2_GetBlobStore(tt *testing.T) {
+	var zeroValue string
+	p := &PackageVersionV2{BlobStore: &zeroValue}
+	p.GetBlobStore()
+	p = &PackageVersionV2{}
+	p.GetBlobStore()
+	p = nil
+	p.GetBlobStore()
+}
+
+func TestPackageVersionV2_GetCreatedAt(tt *testing.T) {
+	var zeroValue time.Time
+	p := &PackageVersionV2{CreatedAt: &zeroValue}
+	p.GetCreatedAt()
+	p = &PackageVersionV2{}
+	p.GetCreatedAt()
+	p = nil
+	p.GetCreatedAt()
+}
+
+func TestPackageVersionV2_GetDescription(tt *testing.T) {
+	var zeroValue string
+	p := &PackageVersionV2{Description: &zeroValue}
+	p.GetDescription()
+	p = &PackageVersionV2{}
+	p.GetDescription()
+	p = nil
+	p.GetDescription()
+}
+
+func TestPackageVersionV2_GetHtmlUrl(tt *testing.T) {
+	var zeroValue string
+	p := &PackageVersionV2{HtmlUrl: &zeroValue}
+	p.GetHtmlUrl()
+	p = &PackageVersionV2{}
+	p.GetHtmlUrl()
+	p = nil
+	p.GetHtmlUrl()
+}
+
+func TestPackageVersionV2_GetId(tt *testing.T) {
+	var zeroValue int64
+	p := &PackageVersionV2{Id: &zeroValue}
+	p.GetId()
+	p = &PackageVersionV2{}
+	p.GetId()
+	p = nil
+	p.GetId()
+}
+
+func TestPackageVersionV2_GetName(tt *testing.T) {
+	var zeroValue string
+	p := &PackageVersionV2{Name: &zeroValue}
+	p.GetName()
+	p = &PackageVersionV2{}
+	p.GetName()
+	p = nil
+	p.GetName()
+}
+
+func TestPackageVersionV2_GetNPMMetadata(tt *testing.T) {
+	p := &PackageVersionV2{}
+	p.GetNPMMetadata()
+	p = nil
+	p.GetNPMMetadata()
+}
+
+func TestPackageVersionV2_GetUpdatedAt(tt *testing.T) {
+	var zeroValue time.Time
+	p := &PackageVersionV2{UpdatedAt: &zeroValue}
+	p.GetUpdatedAt()
+	p = &PackageVersionV2{}
+	p.GetUpdatedAt()
+	p = nil
+	p.GetUpdatedAt()
 }
 
 func TestPage_GetAction(tt *testing.T) {

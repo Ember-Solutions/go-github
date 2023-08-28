@@ -12694,6 +12694,318 @@ func (p *PackageRelease) GetURL() string {
 	return *p.URL
 }
 
+// GetCreatedAt returns the CreatedAt field if it's non-nil, zero value otherwise.
+func (p *PackageV2) GetCreatedAt() time.Time {
+	if p == nil || p.CreatedAt == nil {
+		return time.Time{}
+	}
+	return *p.CreatedAt
+}
+
+// GetDescription returns the Description field if it's non-nil, zero value otherwise.
+func (p *PackageV2) GetDescription() string {
+	if p == nil || p.Description == nil {
+		return ""
+	}
+	return *p.Description
+}
+
+// GetEcosystem returns the Ecosystem field if it's non-nil, zero value otherwise.
+func (p *PackageV2) GetEcosystem() string {
+	if p == nil || p.Ecosystem == nil {
+		return ""
+	}
+	return *p.Ecosystem
+}
+
+// GetHtmlUrl returns the HtmlUrl field if it's non-nil, zero value otherwise.
+func (p *PackageV2) GetHtmlUrl() string {
+	if p == nil || p.HtmlUrl == nil {
+		return ""
+	}
+	return *p.HtmlUrl
+}
+
+// GetId returns the Id field if it's non-nil, zero value otherwise.
+func (p *PackageV2) GetId() int64 {
+	if p == nil || p.Id == nil {
+		return 0
+	}
+	return *p.Id
+}
+
+// GetName returns the Name field if it's non-nil, zero value otherwise.
+func (p *PackageV2) GetName() string {
+	if p == nil || p.Name == nil {
+		return ""
+	}
+	return *p.Name
+}
+
+// GetNamespace returns the Namespace field if it's non-nil, zero value otherwise.
+func (p *PackageV2) GetNamespace() string {
+	if p == nil || p.Namespace == nil {
+		return ""
+	}
+	return *p.Namespace
+}
+
+// GetPackageVersion returns the PackageVersion field.
+func (p *PackageV2) GetPackageVersion() *PackageVersionV2 {
+	if p == nil {
+		return nil
+	}
+	return p.PackageVersion
+}
+
+// GetUpdatedAt returns the UpdatedAt field if it's non-nil, zero value otherwise.
+func (p *PackageV2) GetUpdatedAt() time.Time {
+	if p == nil || p.UpdatedAt == nil {
+		return time.Time{}
+	}
+	return *p.UpdatedAt
+}
+
+// GetAction returns the Action field if it's non-nil, zero value otherwise.
+func (p *PackageV2Event) GetAction() string {
+	if p == nil || p.Action == nil {
+		return ""
+	}
+	return *p.Action
+}
+
+// GetInstallation returns the Installation field.
+func (p *PackageV2Event) GetInstallation() *Installation {
+	if p == nil {
+		return nil
+	}
+	return p.Installation
+}
+
+// GetOrg returns the Org field.
+func (p *PackageV2Event) GetOrg() *Organization {
+	if p == nil {
+		return nil
+	}
+	return p.Org
+}
+
+// GetPackage returns the Package field.
+func (p *PackageV2Event) GetPackage() *PackageV2 {
+	if p == nil {
+		return nil
+	}
+	return p.Package
+}
+
+// GetRepo returns the Repo field.
+func (p *PackageV2Event) GetRepo() *Repository {
+	if p == nil {
+		return nil
+	}
+	return p.Repo
+}
+
+// GetSender returns the Sender field.
+func (p *PackageV2Event) GetSender() *User {
+	if p == nil {
+		return nil
+	}
+	return p.Sender
+}
+
+// GetCommitOid returns the CommitOid field if it's non-nil, zero value otherwise.
+func (p *PackageV2NPMMetadata) GetCommitOid() string {
+	if p == nil || p.CommitOid == nil {
+		return ""
+	}
+	return *p.CommitOid
+}
+
+// GetDeletedById returns the DeletedById field if it's non-nil, zero value otherwise.
+func (p *PackageV2NPMMetadata) GetDeletedById() int {
+	if p == nil || p.DeletedById == nil {
+		return 0
+	}
+	return *p.DeletedById
+}
+
+// GetDependencies returns the Dependencies map if it's non-nil, an empty map otherwise.
+func (p *PackageV2NPMMetadata) GetDependencies() map[string]string {
+	if p == nil || p.Dependencies == nil {
+		return map[string]string{}
+	}
+	return p.Dependencies
+}
+
+// GetDescription returns the Description field if it's non-nil, zero value otherwise.
+func (p *PackageV2NPMMetadata) GetDescription() string {
+	if p == nil || p.Description == nil {
+		return ""
+	}
+	return *p.Description
+}
+
+// GetDevDependencies returns the DevDependencies map if it's non-nil, an empty map otherwise.
+func (p *PackageV2NPMMetadata) GetDevDependencies() map[string]string {
+	if p == nil || p.DevDependencies == nil {
+		return map[string]string{}
+	}
+	return p.DevDependencies
+}
+
+// GetEngines returns the Engines map if it's non-nil, an empty map otherwise.
+func (p *PackageV2NPMMetadata) GetEngines() map[string]string {
+	if p == nil || p.Engines == nil {
+		return map[string]string{}
+	}
+	return p.Engines
+}
+
+// GetGitHead returns the GitHead field if it's non-nil, zero value otherwise.
+func (p *PackageV2NPMMetadata) GetGitHead() string {
+	if p == nil || p.GitHead == nil {
+		return ""
+	}
+	return *p.GitHead
+}
+
+// GetHasShrinkwrap returns the HasShrinkwrap field if it's non-nil, zero value otherwise.
+func (p *PackageV2NPMMetadata) GetHasShrinkwrap() bool {
+	if p == nil || p.HasShrinkwrap == nil {
+		return false
+	}
+	return *p.HasShrinkwrap
+}
+
+// GetHomepage returns the Homepage field if it's non-nil, zero value otherwise.
+func (p *PackageV2NPMMetadata) GetHomepage() string {
+	if p == nil || p.Homepage == nil {
+		return ""
+	}
+	return *p.Homepage
+}
+
+// GetId returns the Id field if it's non-nil, zero value otherwise.
+func (p *PackageV2NPMMetadata) GetId() string {
+	if p == nil || p.Id == nil {
+		return ""
+	}
+	return *p.Id
+}
+
+// GetInstallationCommand returns the InstallationCommand field if it's non-nil, zero value otherwise.
+func (p *PackageV2NPMMetadata) GetInstallationCommand() string {
+	if p == nil || p.InstallationCommand == nil {
+		return ""
+	}
+	return *p.InstallationCommand
+}
+
+// GetLicense returns the License field if it's non-nil, zero value otherwise.
+func (p *PackageV2NPMMetadata) GetLicense() string {
+	if p == nil || p.License == nil {
+		return ""
+	}
+	return *p.License
+}
+
+// GetMain returns the Main field if it's non-nil, zero value otherwise.
+func (p *PackageV2NPMMetadata) GetMain() string {
+	if p == nil || p.Main == nil {
+		return ""
+	}
+	return *p.Main
+}
+
+// GetName returns the Name field if it's non-nil, zero value otherwise.
+func (p *PackageV2NPMMetadata) GetName() string {
+	if p == nil || p.Name == nil {
+		return ""
+	}
+	return *p.Name
+}
+
+// GetNodeVersion returns the NodeVersion field if it's non-nil, zero value otherwise.
+func (p *PackageV2NPMMetadata) GetNodeVersion() string {
+	if p == nil || p.NodeVersion == nil {
+		return ""
+	}
+	return *p.NodeVersion
+}
+
+// GetNpmUser returns the NpmUser field if it's non-nil, zero value otherwise.
+func (p *PackageV2NPMMetadata) GetNpmUser() string {
+	if p == nil || p.NpmUser == nil {
+		return ""
+	}
+	return *p.NpmUser
+}
+
+// GetNpmVersion returns the NpmVersion field if it's non-nil, zero value otherwise.
+func (p *PackageV2NPMMetadata) GetNpmVersion() string {
+	if p == nil || p.NpmVersion == nil {
+		return ""
+	}
+	return *p.NpmVersion
+}
+
+// GetOptionalDependencies returns the OptionalDependencies map if it's non-nil, an empty map otherwise.
+func (p *PackageV2NPMMetadata) GetOptionalDependencies() map[string]string {
+	if p == nil || p.OptionalDependencies == nil {
+		return map[string]string{}
+	}
+	return p.OptionalDependencies
+}
+
+// GetPeerDependencies returns the PeerDependencies map if it's non-nil, an empty map otherwise.
+func (p *PackageV2NPMMetadata) GetPeerDependencies() map[string]string {
+	if p == nil || p.PeerDependencies == nil {
+		return map[string]string{}
+	}
+	return p.PeerDependencies
+}
+
+// GetPublishedViaActions returns the PublishedViaActions field if it's non-nil, zero value otherwise.
+func (p *PackageV2NPMMetadata) GetPublishedViaActions() bool {
+	if p == nil || p.PublishedViaActions == nil {
+		return false
+	}
+	return *p.PublishedViaActions
+}
+
+// GetReadme returns the Readme field if it's non-nil, zero value otherwise.
+func (p *PackageV2NPMMetadata) GetReadme() string {
+	if p == nil || p.Readme == nil {
+		return ""
+	}
+	return *p.Readme
+}
+
+// GetReleaseId returns the ReleaseId field if it's non-nil, zero value otherwise.
+func (p *PackageV2NPMMetadata) GetReleaseId() int {
+	if p == nil || p.ReleaseId == nil {
+		return 0
+	}
+	return *p.ReleaseId
+}
+
+// GetScripts returns the Scripts map if it's non-nil, an empty map otherwise.
+func (p *PackageV2NPMMetadata) GetScripts() map[string]string {
+	if p == nil || p.Scripts == nil {
+		return map[string]string{}
+	}
+	return p.Scripts
+}
+
+// GetVersion returns the Version field if it's non-nil, zero value otherwise.
+func (p *PackageV2NPMMetadata) GetVersion() string {
+	if p == nil || p.Version == nil {
+		return ""
+	}
+	return *p.Version
+}
+
 // GetAuthor returns the Author field.
 func (p *PackageVersion) GetAuthor() *User {
 	if p == nil {
@@ -12860,6 +13172,70 @@ func (p *PackageVersion) GetVersion() string {
 		return ""
 	}
 	return *p.Version
+}
+
+// GetBlobStore returns the BlobStore field if it's non-nil, zero value otherwise.
+func (p *PackageVersionV2) GetBlobStore() string {
+	if p == nil || p.BlobStore == nil {
+		return ""
+	}
+	return *p.BlobStore
+}
+
+// GetCreatedAt returns the CreatedAt field if it's non-nil, zero value otherwise.
+func (p *PackageVersionV2) GetCreatedAt() time.Time {
+	if p == nil || p.CreatedAt == nil {
+		return time.Time{}
+	}
+	return *p.CreatedAt
+}
+
+// GetDescription returns the Description field if it's non-nil, zero value otherwise.
+func (p *PackageVersionV2) GetDescription() string {
+	if p == nil || p.Description == nil {
+		return ""
+	}
+	return *p.Description
+}
+
+// GetHtmlUrl returns the HtmlUrl field if it's non-nil, zero value otherwise.
+func (p *PackageVersionV2) GetHtmlUrl() string {
+	if p == nil || p.HtmlUrl == nil {
+		return ""
+	}
+	return *p.HtmlUrl
+}
+
+// GetId returns the Id field if it's non-nil, zero value otherwise.
+func (p *PackageVersionV2) GetId() int64 {
+	if p == nil || p.Id == nil {
+		return 0
+	}
+	return *p.Id
+}
+
+// GetName returns the Name field if it's non-nil, zero value otherwise.
+func (p *PackageVersionV2) GetName() string {
+	if p == nil || p.Name == nil {
+		return ""
+	}
+	return *p.Name
+}
+
+// GetNPMMetadata returns the NPMMetadata field.
+func (p *PackageVersionV2) GetNPMMetadata() *PackageV2NPMMetadata {
+	if p == nil {
+		return nil
+	}
+	return p.NPMMetadata
+}
+
+// GetUpdatedAt returns the UpdatedAt field if it's non-nil, zero value otherwise.
+func (p *PackageVersionV2) GetUpdatedAt() time.Time {
+	if p == nil || p.UpdatedAt == nil {
+		return time.Time{}
+	}
+	return *p.UpdatedAt
 }
 
 // GetAction returns the Action field if it's non-nil, zero value otherwise.

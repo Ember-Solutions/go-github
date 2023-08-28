@@ -1150,6 +1150,50 @@ func TestPackageRelease_String(t *testing.T) {
 	}
 }
 
+func TestPackageV2_String(t *testing.T) {
+	v := PackageV2{
+		Id:             Int64(0),
+		Name:           String(""),
+		Namespace:      String(""),
+		Description:    String(""),
+		Ecosystem:      String(""),
+		HtmlUrl:        String(""),
+		PackageVersion: &PackageVersionV2{},
+	}
+	want := `github.PackageV2{Id:0, Name:"", Namespace:"", Description:"", Ecosystem:"", HtmlUrl:"", PackageVersion:github.PackageVersionV2{}}`
+	if got := v.String(); got != want {
+		t.Errorf("PackageV2.String = %v, want %v", got, want)
+	}
+}
+
+func TestPackageV2NPMMetadata_String(t *testing.T) {
+	v := PackageV2NPMMetadata{
+		Name:                String(""),
+		Version:             String(""),
+		NpmUser:             String(""),
+		Description:         String(""),
+		GitHead:             String(""),
+		Homepage:            String(""),
+		License:             String(""),
+		Main:                String(""),
+		Id:                  String(""),
+		NodeVersion:         String(""),
+		NpmVersion:          String(""),
+		HasShrinkwrap:       Bool(false),
+		Files:               []string{""},
+		Readme:              String(""),
+		InstallationCommand: String(""),
+		ReleaseId:           Int(0),
+		CommitOid:           String(""),
+		PublishedViaActions: Bool(false),
+		DeletedById:         Int(0),
+	}
+	want := `github.PackageV2NPMMetadata{Name:"", Version:"", NpmUser:"", Description:"", GitHead:"", Homepage:"", License:"", Main:"", Id:"", NodeVersion:"", NpmVersion:"", HasShrinkwrap:false, Files:[""], Readme:"", InstallationCommand:"", ReleaseId:0, CommitOid:"", PublishedViaActions:false, DeletedById:0}`
+	if got := v.String(); got != want {
+		t.Errorf("PackageV2NPMMetadata.String = %v, want %v", got, want)
+	}
+}
+
 func TestPackageVersion_String(t *testing.T) {
 	v := PackageVersion{
 		ID:                  Int64(0),
@@ -1177,6 +1221,21 @@ func TestPackageVersion_String(t *testing.T) {
 	want := `github.PackageVersion{ID:0, Version:"", Summary:"", Body:"", BodyHTML:"", Release:github.PackageRelease{}, Manifest:"", HTMLURL:"", TagName:"", TargetCommitish:"", TargetOID:"", Draft:false, Prerelease:false, CreatedAt:github.Timestamp{0001-01-01 00:00:00 +0000 UTC}, UpdatedAt:github.Timestamp{0001-01-01 00:00:00 +0000 UTC}, Author:github.User{}, InstallationCommand:"", Metadata:github.PackageMetadata{}, PackageHTMLURL:"", Name:"", URL:""}`
 	if got := v.String(); got != want {
 		t.Errorf("PackageVersion.String = %v, want %v", got, want)
+	}
+}
+
+func TestPackageVersionV2_String(t *testing.T) {
+	v := PackageVersionV2{
+		Id:          Int64(0),
+		Name:        String(""),
+		Description: String(""),
+		BlobStore:   String(""),
+		HtmlUrl:     String(""),
+		NPMMetadata: &PackageV2NPMMetadata{},
+	}
+	want := `github.PackageVersionV2{Id:0, Name:"", Description:"", BlobStore:"", HtmlUrl:"", NPMMetadata:github.PackageV2NPMMetadata{}}`
+	if got := v.String(); got != want {
+		t.Errorf("PackageVersionV2.String = %v, want %v", got, want)
 	}
 }
 

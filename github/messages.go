@@ -78,6 +78,7 @@ var (
 		"organization":                   &OrganizationEvent{},
 		"org_block":                      &OrgBlockEvent{},
 		"package":                        &PackageEvent{},
+		"package_v2":                     &PackageV2Event{},
 		"page_build":                     &PageBuildEvent{},
 		"personal_access_token_request":  &PersonalAccessTokenRequestEvent{},
 		"ping":                           &PingEvent{},
